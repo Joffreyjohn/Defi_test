@@ -1,51 +1,79 @@
-/* Styles généraux */
 .navbar {
-    position: fixed;
-    top: 7%;
-    left: 0;
-    /* transform: translateY(-50%); */
-     /* Ajuste la position pour centrer exactement */
-    background-color: #f8f9fa;
-    padding: 20px 0;
-    width: 200px;
-    bottom: -20px;
-    /* text-align: center; */
-  }
-  
-  .navbar-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-link {
-    color: orange;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-  }
+  position: fixed;
+  top: 7%;
+  left: 0;
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  width: 200px;
+  height: calc(100vh - 7%);
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
 
-  .submenu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: block;
-    background-color: #f8f9fa;
-    /* border: 1px solid #ddd; */
-  }
-  
-  .submenu-link {
-    padding: 8px 16px;
-    display: block;
-    text-decoration: none;
-    color: rgb(9, 9, 9);
-  }
-  
-  .submenu-link:hover {
-    background-color: #ddd;
-    color: #000;
-  }
-  
-  .navbar-link:hover {
-    background-color: #575757;
-  }
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin-bottom: 10px;
+}
+
+.navbar-link {
+  color: orange;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-link span.material-icons {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.navbar-link:hover {
+  background-color: #575757;
+  color: #fff;
+}
+
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+
+.submenu-link {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(9, 9, 9);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submenu-link span.material-icons {
+  margin-right: 10px;
+  font-size: 18px;
+  color: gray;
+}
+
+.submenu-link:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+.navbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.navbar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.navbar::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

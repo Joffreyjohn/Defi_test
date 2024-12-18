@@ -1,61 +1,114 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <nav class="navbar">
-  <ul class="navbar-list">
-    <li class="navbar-item">
-      <a (click)="redirectToPage('/dashboard')" class="navbar-link">Tableau de bord</a>
-    </li>
-    <li class="navbar-item">
-      <a (click)="redirectToPage('/project')" class="navbar-link">Mes projets</a>
-    </li>
-    <li class="navbar-item">
-      <a (click)="redirectToPage('/training_plan')" class="navbar-link">Mes plans d'entretien</a>
-    </li>
-    <li class="navbar-item">
-      <a (click)="redirectToPage('/quote')" class="navbar-link">Faire une demande de devis</a>
-    </li>
-    <li class="navbar-item">
-      <a (click)="redirectToPage('/thermal_renovation')" class="navbar-link">Aide de l'état sur la rénovation thermique</a>
-    </li>
-    <li class="navbar-item">
-      <a (click)="toggleSubmenu(1)" class="navbar-link">Données 3D</a>
-      <ul class="submenu" *ngIf="submenuVisibility[1]">
-        <li (click)="redirectToPage('/models_3D')" class="submenu-link">Modèle 3D</li>
-        <li (click)="redirectToPage('/realtime_data')" class="submenu-link">Données en temps réel</li>
-      </ul>
-    </li>
-    <li class="navbar-item">
-      <a (click)="toggleSubmenu(2)" class="navbar-link">Analyse des états initiaux</a>
-      <ul class="submenu" *ngIf="submenuVisibility[2]">
-        <li (click)="redirectToPage('/BIM_data')" class="submenu-link">Données BIM (Parsing)</li>
-        <li (click)="redirectToPage('/idt')" class="submenu-link">Données IDT</li>
-        <li (click)="redirectToPage('/acv')" class="submenu-link">Analyse ACV</li>
-      </ul>
-    </li>
-    <li class="navbar-item">
-      <a (click)="toggleSubmenu(3)" class="navbar-link">Diagnostics</a>
-      <ul class="submenu" *ngIf="submenuVisibility[3]">
-        <li (click)="redirectToPage('/traitement')" class="submenu-link">Traitement</li>
-        <li (click)="redirectToPage('/anomalies')" class="submenu-link">Anomalies</li>
-        <li (click)="redirectToPage('/diagnosis')" class="submenu-link">Diagnostication</li>
-      </ul>
-    </li>
-    <li class="navbar-item">
-      <a (click)="toggleSubmenu(4)" class="navbar-link">Projections</a>
-      <ul class="submenu" *ngIf="submenuVisibility[4]">
-        <li (click)="redirectToPage('/acv')" class="submenu-link">Analyse ACV</li>
-        <li (click)="redirectToPage('/next_10')" class="submenu-link">Prochains 10 ans</li>
-        <li (click)="redirectToPage('/next_50')" class="submenu-link">Prochains 50 ans</li>
-      </ul>
-    </li>
-    <li class="navbar-item">
-      <a (click)="toggleSubmenu(5)" class="navbar-link">Plans d'entretien</a>
-      <ul class="submenu" *ngIf="submenuVisibility[5]">
-        <li (click)="redirectToPage('/Immediate')" class="submenu-link">Entretien Immédiats</li>
-        <li (click)="redirectToPage('/maintain_10')" class="submenu-link">Entretien sur 10 ans</li>
-        <li (click)="redirectToPage('/maintain_50')" class="submenu-link">Entretien sur 50 ans</li>
-      </ul>
-    </li>
-    <li class="navbar-item">
-      <a (click)="redirectToPage('/esperancy')" class="navbar-link">Espérance de vie de l'ouvrage</a>
-    </li>
-  </ul>
+  <div class="navbar-scroll">
+    <ul class="navbar-list">
+      <li class="navbar-item">
+        <a (click)="redirectToPage('/dashboard')" class="navbar-link">
+          <span class="material-icons">dashboard</span> Tableau de bord
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a (click)="redirectToPage('/project')" class="navbar-link">
+          <span class="material-icons">folder</span> Mes projets
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a (click)="redirectToPage('/training_plan')" class="navbar-link">
+          <span class="material-icons">engineering</span> Mes plans d'entretien
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a (click)="redirectToPage('/quote')" class="navbar-link">
+          <span class="material-icons">request_quote</span> Faire une demande de devis
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a (click)="redirectToPage('/thermal_renovation')" class="navbar-link">
+          <span class="material-icons">build</span> Aide de l'état sur la rénovation thermique
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a (click)="toggleSubmenu(1)" class="navbar-link">
+          <span class="material-icons">view_in_ar</span> Données 3D
+        </a>
+        <ul class="submenu" *ngIf="submenuVisibility[1]">
+          <li (click)="redirectToPage('/models_3D')" class="submenu-link">
+            <span class="material-icons">view_in_ar</span> Model 3D
+          </li>
+          <li (click)="redirectToPage('/realtime_data')" class="submenu-link">
+            <span class="material-icons">timeline</span> Données en temps réel
+          </li>
+        </ul>
+      </li>
+      <li class="navbar-item">
+        <a (click)="toggleSubmenu(2)" class="navbar-link">
+          <span class="material-icons">analytics</span> Analyse Etats initial
+        </a>
+        <ul class="submenu" *ngIf="submenuVisibility[2]">
+          <li (click)="redirectToPage('/BIM_data')" class="submenu-link">
+            <span class="material-icons">data_usage</span> Données BIM (Parsing)
+          </li>
+          <li (click)="redirectToPage('/idt')" class="submenu-link">
+            <span class="material-icons">storage</span> Données IDT
+          </li>
+          <li (click)="redirectToPage('/acv')" class="submenu-link">
+            <span class="material-icons">insights</span> Analyse ACV
+          </li>
+        </ul>
+      </li>
+      <li class="navbar-item">
+        <a (click)="toggleSubmenu(3)" class="navbar-link">
+          <span class="material-icons">construction</span> Diagnostics
+        </a>
+        <ul class="submenu" *ngIf="submenuVisibility[3]">
+          <li (click)="redirectToPage('/traitement')" class="submenu-link">
+            <span class="material-icons">medical_services</span> Traitement
+          </li>
+          <li (click)="redirectToPage('/anomalies')" class="submenu-link">
+            <span class="material-icons">report_problem</span> Anomalies
+          </li>
+          <li (click)="redirectToPage('/diagnosis')" class="submenu-link">
+            <span class="material-icons">fact_check</span> Diagnostication
+          </li>
+        </ul>
+      </li>
+      <li class="navbar-item">
+        <a (click)="toggleSubmenu(4)" class="navbar-link">
+          <span class="material-icons">insights</span> Projections
+        </a>
+        <ul class="submenu" *ngIf="submenuVisibility[4]">
+          <li (click)="redirectToPage('/acv')" class="submenu-link">
+            <span class="material-icons">bar_chart</span> Analyse ACV
+          </li>
+          <li (click)="redirectToPage('/next_10')" class="submenu-link">
+            <span class="material-icons">calendar_today</span> Prochains 10 ans
+          </li>
+          <li (click)="redirectToPage('/next_50')" class="submenu-link">
+            <span class="material-icons">event</span> Prochains 50 ans
+          </li>
+        </ul>
+      </li>
+      <li class="navbar-item">
+        <a (click)="toggleSubmenu(5)" class="navbar-link">
+          <span class="material-icons">edit</span> Plans d'entretien
+        </a>
+        <ul class="submenu" *ngIf="submenuVisibility[5]">
+          <li (click)="redirectToPage('/Immediate')" class="submenu-link">
+            <span class="material-icons">alarm_on</span> Entretien Immédiats
+          </li>
+          <li (click)="redirectToPage('/maintain_10')" class="submenu-link">
+            <span class="material-icons">schedule</span> Entretien sur 10 ans
+          </li>
+          <li (click)="redirectToPage('/maintain_50')" class="submenu-link">
+            <span class="material-icons">update</span> Entretien sur 50 ans
+          </li>
+        </ul>
+      </li>
+      <li class="navbar-item">
+        <a (click)="redirectToPage('/esperancy')" class="navbar-link">
+          <span class="material-icons">hourglass_bottom</span> Espérance de vie de l'ouvrage
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>

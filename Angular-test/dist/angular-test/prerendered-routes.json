@@ -1,0 +1,23 @@
+{
+  "routes": {
+    "/": {},
+    "/BIM_data": {},
+    "/acv": {},
+    "/anomalies": {},
+    "/dashboard": {},
+    "/diagnosis": {},
+    "/esperancy": {},
+    "/immediate": {},
+    "/maintain_10": {},
+    "/maintain_50": {},
+    "/models_3D": {},
+    "/next_10": {},
+    "/next_50": {},
+    "/project": {},
+    "/quote": {},
+    "/realtime_data": {},
+    "/thermal_renovation": {},
+    "/training_plan": {},
+    "/traitement": {}
+  }
+}
