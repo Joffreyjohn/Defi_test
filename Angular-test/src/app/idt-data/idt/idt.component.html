@@ -1,0 +1,10 @@
+<div>
+    <button *ngFor="let range of ['7d', '30d', '90d', '6m', '1y']" (click)="updateChart(range)">
+      {{ range }}
+    </button>
+  </div>
+  
+  <div class="chart-container" style="height: 500px; width: 100%;">
+    <canvas #chartCanvas></canvas>
+</div>
+  

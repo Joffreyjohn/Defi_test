@@ -1,0 +1,19 @@
+/* header.component.css */
+.header {
+    position: center; /* Position en haut */
+    background-color: #2f5596; 
+    color: white; /* Couleur du texte en blanc */
+    border-radius: 5px; /* Arrondir les coins */
+    padding: 20px;
+    margin-bottom: 20px; /* Marge en bas */
+    top: 30px; /* Position en haut */
+    /* Augmenter la longueur */
+    width: 1420px; /* largeur fixe de 1000 pixels */
+    text-align: center; /* Centrer le texte horizontalement */
+  }
+  
+  .header h1 {
+    margin: 0; /* Supprimer la marge par défaut */
+    font-size: 2rem; /* Ajuster la taille du texte */
+  }
+  
