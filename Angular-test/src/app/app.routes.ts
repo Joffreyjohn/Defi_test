@@ -19,7 +19,7 @@ import { AcvComponent } from './acv/acv.component';
 import { ImmediateComponent } from './immediate/immediate.component';
 import { Next10Component } from './next-10/next-10.component';
 import { Next50Component } from './next-50/next-50.component';
-// import { IDTComponent } from './idt-data/idt/idt.component';
+import { IdtComponent } from './idt-data/idt/idt.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -41,7 +41,7 @@ export const routes: Routes = [
     {path: 'immediate', component: ImmediateComponent},
     {path: 'next_10', component: Next10Component},
     {path: 'next_50', component: Next50Component},
-    // { path: 'idt', component: IDTComponent }
+    { path: 'idt', component: IdtComponent }
 
 ];
 
